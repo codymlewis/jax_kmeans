@@ -40,7 +40,11 @@ def lloyds(
         clusters = jnp.argmin(dists, axis=1)
 
         def find_centroids(unused, cluster):
-            cluster_vals = jnp.where(jnp.stack((clusters == cluster, clusters == cluster), axis=1), samples, 0.0)
+            cluster_vals = jnp.where(
+                jnp.tile(clusters == cluster, samples.shape[-1:0:-1] + (1,)).T,
+                samples,
+                jnp.zeros_like(samples, dtype=samples.dtype),
+            )
             cluster_size = jnp.maximum(1, jnp.sum(clusters == cluster))
             return unused, jnp.sum(cluster_vals, axis=0) / cluster_size
 
