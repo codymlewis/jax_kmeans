@@ -1,10 +1,10 @@
 [project]
-name = "clax"
+name = "jax_kmeans"
 authors = [
     {name = "Cody Lewis", email = "hello@codymlewis.com"}
 ]
 version = "0.0.1"
-description = "Pure jax implementations of clustering algorithms"
+description = "Pure jax implementations of k-means clustering"
 readme = "README.md"
 requires-python = ">=3.9"
 classifiers = [
@@ -18,28 +18,3 @@ dependencies = [
 
 [project.urls]
 repository = "https://github.com/codymlewis/clax"
-
-[tool.poetry]
-name = "clax"
-version = "0.1.0"
-description = ""
-authors = ["Cody Lewis <hello@codymlewis.com>"]
-readme = "README.md"
-
-[tool.poetry.dependencies]
-python = "^3.11"
-jax = "^0.4.20"
-chex = "^0.1.84"
-matplotlib = "^3.8.2"
-pyqt6 = "^6.6.0"
-
-[tool.poetry.group.dev.dependencies]
-autopep8 = "^2.0.4"
-jedi = "^0.19.1"
-flake8 = "^6.1.0"
-python-lsp-server = "^1.8.0"
-yapf = "^0.40.1"
-
-[build-system]
-requires = ["poetry-core", "setuptools", "wheel"]
-build-backend = "poetry.core.masonry.api"

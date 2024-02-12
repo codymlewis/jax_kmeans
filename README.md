@@ -1,6 +1,3 @@
-# Clax
+# JAX K-Means
 
-Pure jax implementations of clustering algorithms.
-
-Currently implemented:
-- k-means
+Pure jax implementations of the k-means clustering algorithm
